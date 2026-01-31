@@ -1,0 +1,74 @@
+employee-management-system/
+├── backend/                          # Django REST Framework Backend
+│   ├── employee_system/              # Main Django project
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── wsgi.py
+│   │   └── asgi.py
+│   ├── employees/                    # Employee app
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   └── migrations/
+│   ├── authentication/               # Custom auth app
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── views.py
+│   │   └── urls.py
+│   ├── manage.py
+│   └── requirements.txt
+│
+├── frontend/                         # React Frontend
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── auth/
+│   │   │   │   ├── Login.jsx
+│   │   │   │   └── ProtectedRoute.jsx
+│   │   │   ├── employees/
+│   │   │   │   ├── EmployeeList.jsx
+│   │   │   │   ├── EmployeeForm.jsx
+│   │   │   │   ├── EmployeeCard.jsx
+│   │   │   │   └── DeleteConfirmModal.jsx
+│   │   │   ├── layout/
+│   │   │   │   ├── Header.jsx
+│   │   │   │   ├── Sidebar.jsx
+│   │   │   │   └── Layout.jsx
+│   │   │   └── common/
+│   │   │       ├── Button.jsx
+│   │   │       ├── Input.jsx
+│   │   │       └── LoadingSpinner.jsx
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── authService.js
+│   │   │   └── employeeService.js
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx
+│   │   ├── hooks/
+│   │   │   └── useAuth.js
+│   │   ├── utils/
+│   │   │   ├── validation.js
+│   │   │   └── constants.js
+│   │   ├── App.jsx
+│   │   ├── index.jsx
+│   │   └── index.css
+│   ├── package.json
+│   ├── tailwind.config.js
+│   └── postcss.config.js
+│
+├── docs/
+│   ├── API_DOCUMENTATION.md
+│   ├── SETUP_GUIDE.md
+│   └── ARCHITECTURE.md
+│
+└── README.md
