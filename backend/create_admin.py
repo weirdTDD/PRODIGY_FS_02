@@ -11,4 +11,4 @@ if admin:
     print('Admin user already exists')
 else:
     User.objects.create_superuser('admin', 'admin@example.com', 'admin123')
-    print('Created admin user with username: admin, password: admin123')
+  #  print('Created admin user with username: admin, password: admin123')
