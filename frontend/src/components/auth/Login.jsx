@@ -40,13 +40,13 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 px-6">
       <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-2xl shadow-2xl">
         <div>
           <h2 className="text-center text-4xl font-bold text-gray-900 mb-2">
             Employee Management
           </h2>
-          <p className="text-center text-gray-600">Sign in to your account</p>
+          <p className="text-center text-gray-600 text-lg font-medium">Sign in to your account</p>
         </div>
         
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

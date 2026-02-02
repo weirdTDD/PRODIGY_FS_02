@@ -62,6 +62,11 @@ class EmployeeSerializer(serializers.ModelSerializer):
     
     def validate_salary(self, value):
         """Validate salary is positive"""
+        try:
+            value = float(value)
+        except (TypeError, ValueError):
+            raise serializers.ValidationError("Salary must be a valid number.")
+            
         if value <= 0:
             raise serializers.ValidationError("Salary must be greater than zero.")
         if value > 10000000:

@@ -41,7 +41,11 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     
     def perform_create(self, serializer):
         """Set the created_by field to current user"""
-        serializer.save(created_by=self.request.user)
+        try:
+            serializer.save(created_by=self.request.user)
+        except Exception as e:
+            print(f"Error creating employee: {str(e)}")
+            raise
     
     def perform_update(self, serializer):
         """Set the updated_by field to current user"""

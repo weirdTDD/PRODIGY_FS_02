@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { DEPARTMENTS, EMPLOYMENT_STATUS, STATUS_COLORS, DEPARTMENT_COLORS } from '../../utils/constants';
 import { formatCurrency } from '../../utils/validation';
 import DeleteConfirmModal from './DeleteConfirmModal';
+import { Plus } from 'lucide-react';
 
 const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
@@ -82,18 +83,23 @@ const EmployeeList = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-gray-900">Employee Management</h1>
-        <button
-          onClick={() => navigate('/employees/new')}
-          className="btn-primary flex items-center space-x-2"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-          </svg>
-          <span>Add Employee</span>
-        </button>
+      <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto mb-10 gap-6 ">
+        <div className='px-4'>
+          <h1 className="flex text-nowrap text-2xl md:text-4xl font-bold text-gray-900 text-center mb-4">Employee Record Management</h1>
+          <p className='text-center md:text-left  text-lg font-medium text-gray-500 max-w-2xl'>Fast track your roles and task right after unboarding to track staff status and organizational structure.</p>
+        </div>
+        
+        <div className='flex items-center md:justify-end '>
+          <button
+            onClick={() => navigate('/employees/new')}
+            className=" w-full md:max-w-xs flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2  mx-8 rounded-lg md:mt-[60px]"
+          >
+            <Plus className="w-5 h-5" />
+            <span>Add Employee</span>
+          </button>
+        </div>
       </div>
+      
 
       {/* Filters */}
       <div className="card">
@@ -230,7 +236,7 @@ const EmployeeList = () => {
                       </button>
                       <button
                         onClick={() => openDeleteModal(employee)}
-                        className="text-red-600 hover:text-red-900"
+                        className="bg-red-600 hover:bg-red-900 text-white px-2 py-1 rounded-lg"
                       >
                         Delete
                       </button>

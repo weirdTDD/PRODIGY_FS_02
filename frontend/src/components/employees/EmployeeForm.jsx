@@ -94,7 +94,7 @@ const EmployeeForm = ({ mode = 'create' }) => {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold text-gray-900">
+        <h1 className="text-3xl font-bold text-gray-900 text-center">
           {mode === 'create' ? 'Add New Employee' : 'Edit Employee'}
         </h1>
       </div>
